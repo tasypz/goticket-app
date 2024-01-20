@@ -1,6 +1,6 @@
 export default function EventList({ events }) {
   return (
-    <div className="mt-10 mx-5">
+    <div className="mt-10 mx-5 mb-10">
       <h1 className="text-2xl font-bold mb-5">Popular Events</h1>
       <div className="grid grid-flow-row md:grid-cols-4 gap-x-4 gap-y-8 justify-items-center">
         {events.map((event) => (
