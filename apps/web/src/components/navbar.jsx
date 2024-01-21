@@ -55,8 +55,8 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="flex-auto">
-            <Link className="hover:underline" href="/help-center">
-              Help Center
+            <Link className="hover:underline" href="/event-list">
+              Event List
             </Link>
           </div>
           <div className="flex-auto ">
@@ -98,27 +98,25 @@ export default function Navbar() {
                 aria-labelledby="options-menu"
               >
                 {/* Dropdown Items */}
-                <a
-                  href="#"
-                  className="block px-4 py-2  text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                  role="menuitem"
+
+                <Link
+                  className="hover:underline block px-4 py-2  text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                  href="/find-events"
                 >
                   Find Events
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2  text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                  role="menuitem"
+                </Link>
+                <Link
+                  className="hover:underline block px-4 py-2  text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                  href="/create-events"
                 >
                   Create Events
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2  text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                  role="menuitem"
+                </Link>
+                <Link
+                  className="hover:underline block px-4 py-2  text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                  href="/event-list"
                 >
-                  Help Center
-                </a>
+                  Event List
+                </Link>
               </div>
             </div>
           </div>
