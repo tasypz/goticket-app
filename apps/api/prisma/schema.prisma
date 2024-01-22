@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
+  url      = "mysql://root:root@localhost:3306/goticket_database"
 }
 
 // model Sample {
@@ -21,12 +21,14 @@ datasource db {
 // }
 
 model User {
-  id             Int             @id @default(autoincrement())
-  user_name      String          @unique
-  email          String          @unique
+  id             Int            @id @default(autoincrement())
+  user_name      String         @unique
+  // firstName      String
+  // lastName       String
+  email          String
   password       String
-  referral_code  String
-  role           Role
+  referral_code  String?
+  role           Role            @default(USER)
   created_at     DateTime        @default(now())
   updated_at     DateTime        @updatedAt
   events         Event[]
@@ -108,8 +110,8 @@ model Review {
 }
 
 enum Role {
-  participant
-  organizer
+  USER
+  ORGANIZER
 }
 
 enum Category {
