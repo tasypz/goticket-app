@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function EventList({ events }) {
   return (
     <div className="mt-10 mx-5 mb-10">
@@ -23,7 +25,7 @@ export default function EventList({ events }) {
       </div>
       <div className="flex justify-center items-center">
         <button className="bg-[#f05537] text-white py-2 px-4 rounded-md hover:bg-[#f05537]/70 mt-8">
-          Jelajah ke lebih banyak event
+          <Link href="/event-list">Jelajah ke lebih banyak event</Link>
         </button>
       </div>
     </div>

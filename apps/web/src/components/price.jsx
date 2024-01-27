@@ -1,23 +1,15 @@
 'use client';
 import { useState } from 'react';
 
-export default function Price() {
-  const [price, setPrice] = useState('');
+export default function Price({ price, setPrice }) {
+  const [isPaid, setIsPaid] = useState('');
 
   const handlePaidClick = () => {
-    setPrice(
-      <div>
-        <p>Price in Rupiah</p>
-        <input
-          type="Number"
-          className="w-full py-2 pl-2 pr-4 text-sm text-gray-800 bg-white focus:outline-[#1e0a3c] focus:bg-white focus:text-gray-900 border border-gray-300"
-        ></input>
-      </div>,
-    );
+    setIsPaid(true);
   };
 
   const handleFreeClick = () => {
-    setPrice('Free');
+    setIsPaid(false);
   };
   return (
     <div className="mt-8">
@@ -40,10 +32,18 @@ export default function Price() {
         </button>
       </div>
       <div className="mt-4">
-        {price && (
+        {isPaid ? (
           <div>
-            <p className="mb-3 text-sm font-bold">{price}</p>
+            <p>Price in Rupiah</p>
+            <input
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+              type="Number"
+              className="w-full py-2 pl-2 pr-4 text-sm text-gray-800 bg-white focus:outline-[#1e0a3c] focus:bg-white focus:text-gray-900 border border-gray-300"
+            ></input>
           </div>
+        ) : (
+          <p className="mb-3 text-sm font-bold">Free</p>
         )}
       </div>
     </div>

@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 
-export default function Location() {
+export default function Location({ location, setLocation }) {
   const [content, setContent] = useState(null);
   const handleVenueClick = () => {
     setContent('Venue Location');
@@ -39,6 +39,8 @@ export default function Location() {
               type="text"
               className="w-full py-2 pl-2 pr-4 text-sm text-gray-800 bg-white focus:outline-[#1e0a3c] focus:bg-white focus:text-gray-900 border border-gray-300"
               placeholder={content}
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
             />
           </div>
         )}

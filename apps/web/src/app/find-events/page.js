@@ -1,9 +1,10 @@
 import 'tailwindcss/tailwind.css';
+import ImageUploader from '../../components/image-uploader';
 
 export default function FindEvent() {
   return (
     <>
-      <h1 className="text-red-500">Find Event</h1>
+      <ImageUploader />
     </>
   );
 }

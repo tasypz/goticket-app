@@ -35,11 +35,13 @@ export default function Navbar() {
           <span className="absolute inset-y-0 left-0 flex items-center pl-2">
             <Search className="w-6 h-6" />
           </span>
-          <input
-            type="text"
-            className="w-full py-2 pl-10 pr-4 text-sm text-gray-800 bg-white rounded-xl focus:outline-none focus:bg-white focus:text-gray-900 border border-gray-300"
-            placeholder="Search"
-          />
+          <Link href="/event-list">
+            <input
+              type="text"
+              className="w-full py-2 pl-10 pr-4 text-sm text-gray-800 bg-white rounded-xl focus:outline-none focus:bg-white focus:text-gray-900 border border-gray-300"
+              placeholder="Search"
+            />
+          </Link>
         </div>
       </div>
       <div class="flex-1 w-32 ">
